@@ -1,0 +1,15 @@
+<h1>City locator:</h1>
+
+<div>
+    <button (click)="getLocation()">
+        Location now
+    </button>
+    <ul>
+        <li *ngFor="let location of getLocations()">
+            Latitude: {{ location.latitude }}
+            <br>
+            Longitud: {{ location.longitude }}
+        </li>
+    </ul>
+    <p *ngIf="errorMessage">Atención: {{ errorMessage }}</p>
+</div>
